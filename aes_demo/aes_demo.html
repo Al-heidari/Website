@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES Encryption Demo</title>
+    <link rel="stylesheet" href="aes.css">
+</head>
+<body>
+    <section class="aes-about">
+        <h1>AES Encryption/Decryption Demo</h1>
+        <p>Encrypt or decrypt text using AES with 128, 192, or 256-bit keys.</p>
+    </section>
+    
+    <section class="aes-demo-container">
+        <h1>AES Encryption/Decryption Demo</h1>
+        <p>Encrypt or decrypt text using AES with 128, 192, or 256-bit keys.</p>
+
+        <div class="aes-demo-box">
+            <label for="inputText">Text to Encrypt/Decrypt:</label>
+            <textarea id="inputText" rows="4" placeholder="Enter the text you want to encrypt here..."></textarea>
+            
+            <label for="key">Encryption Key (16, 24, or 32 characters):</label>
+            <input type="text" id="key" placeholder="Enter a key..." maxlength="32">
+
+            <div class="key-size-selection">
+                <h3>Vælg nøglestørrelse</h3>
+                <div class="key-options">
+                    <button class="key-option active" onclick="selectKeySize(128)">128 bit</button>
+                    <button class="key-option" onclick="selectKeySize(192)">192 bit</button>
+                    <button class="key-option" onclick="selectKeySize(256)">256 bit</button>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button onclick="processAES('encrypt')">Encrypt</button>
+                <button onclick="processAES('decrypt')">Decrypt</button>
+            </div>
+            
+            <div class="output">
+                <label for="outputText">Result (Hex format):</label>
+                <textarea id="outputText" rows="4" readonly></textarea>
+            </div>
+        </div>
+    </section>
+
+    <script src="aes_demo.js"></script>
+    <script>
+        function selectKeySize(size) {
+            // Deselect all key-option buttons
+            document.querySelectorAll('.key-option').forEach(button => button.classList.remove('active'));
+            
+            // Get the clicked button using the `size` parameter
+            const selectedButton = document.querySelector(`.key-option[onclick="selectKeySize(${size})"]`);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
+            }
+
+            // Store the selected key size in a global variable or a hidden input field if needed
+            window.selectedKeySize = size; // Example of storing the selected size
+            console.log("Selected key size:", size);
+        }
+
+    </script>
+</body>
+</html>
