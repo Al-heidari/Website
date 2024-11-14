@@ -46,7 +46,8 @@
     <div class="row">
         <div class="project-col">
             <h3>AES</h3>
-            <p>xxyzcfhærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawe
+            <p>Project description...<br>
+                xxyzcfhærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawe
                 vawevnaæwenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipgyzcfh
                 ærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawevawevn
                 wenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipg</p>
@@ -54,24 +55,46 @@
         </div>
         <div class="project-col">
             <h3>Tic Tac Toe</h3>
-            <p>xyzcfhærewofewrnergpnwregnrweignergergergwegrivnmisep8georipg</p>
+            <p>Project description...<br>
+                xyzcfhærewofewrnergpnwregnrweignergergergwegrivnmisep8georipg</p>
             <a href="" class="demo-btn">Try the demo</a>
         </div>
         <div class="project-col">
             <h3>Intermediate</h3>
-            <p>xyzcfhærewofewrnergpnwregnrweignergergergwegrivnmisep8georipg</p>
+            <p>Project description...<br>
+                xyzcfhærewofewrnergpnwregnrweignergergergwegrivnmisep8georipg</p>
             <a href="" class="demo-btn">Try the demo</a>
         </div>
 
         <!-- Hidden additional projects -->
 
         <div class="project-col hidden"> <!-- Project 4 -->
-            <h3>New Project</h3>
+            <h3>Another Project</h3>
             <p>Project description...</p>
         </div>
         <div class="project-col hidden"> <!-- Project 5 -->
             <h3>Another Project</h3>
-            <p>Project description...</p>
+            <p>Project description...<br>
+                xxyzcfhærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawe
+                vawevnaæwenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipgyzcfh
+                ærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawevawevn
+                wenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipg</p>
+        </div>
+        <div class="project-col hidden">
+            <h3>Another Project</h3>
+            <p>Project description...<br>
+                xxyzcfhærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawe
+                vawevnaæwenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipgyzcfh
+                ærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawevawevn
+                wenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipg</p>
+        </div>
+        <div class="project-col hidden">
+            <h3>Another Project</h3>
+            <p>Project description...<br>
+                xxyzcfhærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawe
+                vawevnaæwenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipgyzcfh
+                ærewofewrnergpnwrhrthrthtvdsvdnæsdvnuinviunvæawenwneæfvnwaevæioawevawevn
+                wenwnavææawnvenwaueweegnrweignergergergwegrivnmisep8georipg</p>
         </div>
         <!-- Add more hidden projects as needed -->
     </div>
@@ -112,19 +135,25 @@
 <!--------JavaScript for Toggle Menu-------->
 
 <script>
+    var navlinks = document.getElementById("navlinks");
+        function showmenu(){
+            navlinks.style.right = "0"; 
+        }
+        function closemenu(){
+            navlinks.style.right = "-150px";
+        }
 
-    var navlinks = document.getElementById("navlinks")
-    function showmenu(){
-        navlinks.style.right = "0" 
-    }
-    function closemenu(){
-        navlinks.style.right = "-150px"
-    }
-
-
+        function loadMoreProjects() {
+            var projectsPerClick = 3;
+            var hiddenProjects = document.querySelectorAll('.project-col.hidden');
+            for (var i = 0; i < projectsPerClick && i < hiddenProjects.length; i++) {
+                hiddenProjects[i].classList.remove('hidden');
+            }
+            if (hiddenProjects.length <= projectsPerClick) {
+                document.getElementById('load-more').style.display = 'none';
+            }
+        }
 </script>
-
-
 
 
 </body>
