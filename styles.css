@@ -165,6 +165,8 @@ nav .fa-solid{
         max-width: 500px; /* Set a max width to keep consistency */
         margin: 10px 0; 
         padding: 15px; /* Adjust padding if needed */
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
@@ -193,7 +195,7 @@ p{
     margin-top: 1%;
     display: flex;
     justify-content: center; /* Centrér hele row */
-    flex-wrap: nowrap; /* Hold bokse i en række */
+    flex-wrap: wrap; /* Hold bokse i en række */
     margin: auto;
 }
 
@@ -235,6 +237,7 @@ p{
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
+    background-color: #f44336; /* Color of the button */
     color: #fff;
     border: none;
     border-radius: 5px;
