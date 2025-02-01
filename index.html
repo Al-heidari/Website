@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbas Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpeg"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">COURSE</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </nav>
+
+    <div class="text-box">
+        <h1>Dedicated Cyber ​​Technologist</h1>
+        <p>
+            You can read much more about me <br> here
+        </p>
+        <a href="" class="hero-btn">Visit here to know more</a>
+
+
+    </div>    
+    </section>
+
+<!--------projects listing-------->
+
+<section class="projects">
+    <h1>Projects Done</h1>
+    <p>For more comprehensive information, i kindly recommend reviewing the project description.</p>
+
+    <div class="row">
+        <div class="project_col">
+            <h3>Secure - TicTacToe</h3>
+            <p class="project_text"> This project involves the development of a
+            network-based Tic-Tac-Toe game with secure communication. Implemented
+            in Python using PyQt6, the game allows two players to compete over
+            a network while ensuring data integrity through Fletcher-16 checksum
+            verification and encrypted message exchanges. The system includes
+            a graphical user interface (GUI), real-time board updates, and a
+            rematch option, providing a secure and interactive gaming experience.
+            </p>
+        <a href="x" class="demo_btn">Try the demo</a>  
+        </div>
+        <div class="project_col">
+            <h3>AES</h3>
+            <p class="project_text"> The Advanced Encryption Standard (AES) 
+                Implementation project involves developing a cryptographic system
+                in Python to encrypt and decrypt data using the AES algorithm.
+                AES is a symmetric block cipher that processes 128-bit data blocks
+                with encryption keys of 128, 192, or 256 bits. The implementation
+                includes key components such as Key Expansion, which generates
+                round keys, and fundamental transformations like SubBytes,
+                ShiftRows, MixColumns, and AddRoundKey, ensuring secure and
+                efficient encryption. The system supports both encryption and
+                decryption and has been tested using official AES test vectors
+                to verify its correctness.</p>
+            
+            <a href="aes_demo/aes_demo.html" class="demo_btn">Try the demo</a>
+        </div>
+        <div class="project_col">
+            <h3>FPGA Checksum Verifier</h3>
+            <p class="project_text"> This project involves the creation of an FPGA-based digital module that
+                performs IP header checksum verification, as specified by RFC 791. 
+                The module, developed in VHDL, receives IP packet headers, performs
+                checksum calculations, and verifies the results against the received
+                checksum. The system tracks valid and invalid checksums and reports
+                them using LED indicators. A testbench simulates the processing of
+                IP packets, reading data from an input file and systematically
+                testing the module. This project offers practical experience in
+                FPGA development, VHDL programming, and the design of digital
+                systems for communication networks.</p>
+            
+            <a href="x" class="demo_btn">Demo illustration</a>
+        </div>
+
+        <!-- Hidden additional projects -->
+
+        <div class="project_col hidden"> <!-- Project 4 -->
+            <h3>Bellman-Ford</h3>
+            <p>This project involves the implementation of the Bellman-Ford algorithm
+                for shortest path computation in a weighted directed graph. Developed
+                in Python, the system initializes node distances and iteratively updates
+                them by processing all edges, ensuring accurate path calculations while
+                detecting negative-weight cycles. The algorithm's execution is visually
+                represented using NetworkX and Matplotlib, displaying nodes, edges,
+                and updated distances in real-time. The system provides a structured
+                visualization of shortest paths and network topology, offering a
+                clear representation of the algorithm's operation. </p>
+            <a href="x" class="demo_btn">Demo illustration</a>
+        </div>
+        <div class="project_col hidden"> <!-- Project 5 -->
+            <h3>GUI</h3>
+            <p> This project involves the development of GUI applications using PyQt6,
+                focusing on interactive user interfaces and real-time data processing.
+                The implementations include a binary-decimal-hexadecimal converter,
+                a Tic-Tac-Toe game with network communication, and a multi-threaded
+                application integrating graphics, prime number generation, and a UDP
+                server-client model. The applications demonstrate various GUI
+                components, event handling, and parallel processing, providing
+                interactive and dynamic user experiences.</p>
+            <a href="x" class="demo_btn">Try the demo</a>
+        </div>
+        <div class="project_col hidden">
+            <h3>Real-Time Chat Application</h3>
+            <p> This project involves the development of a real-time chat application
+                with a graphical user interface (GUI) using PyQt6 and socket programming.
+                The system consists of a server that manages client connections and
+                multiple clients that communicate over a network. The chat application
+                supports real-time messaging, user identification, and an emoji keyboard
+                for enhanced interaction. Messages are displayed dynamically, including
+                timestamps and formatting for improved readability. The server handles
+                incoming connections, relays messages to connected clients, and manages
+                user sessions. This project demonstrates network communication, GUI
+                development, and multi-threading, creating an interactive and
+                user-friendly messaging platform.</p>
+            <a href="x" class="demo_btn">Try the demo</a>
+        </div>
+        <div class="project_col hidden">
+            <h3>Coming soon</h3>
+            <p> </p>
+        </div>
+        <!-- Add more hidden projects as needed -->
+    </div>
+
+    <button id="load-more" onclick="loadMoreProjects()">Show More Projets</button>
+    
+</section>
+
+<!--------Get in contact-------->
+
+<section class="contact">
+    <h1>Feel free to reach out at any time & from anywhere</h1>
+    <p>Do not hesitate to get in touch!</p>
+    <a href="" class="hero-btn">CONTACT ME</a>
+</section>
+
+<!--------About me-------->
+
+<section class="footer">
+    <h4>About Me</h4>
+    <p>xxxxxxxxxxxxxxxxxxxxx</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/abbas.haydari.71" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/abbas_gym_10/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abbasheidari-/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+    <p>Made with <i class="fas fa-heart"></i> by Abbas Heidari</p>
+</section>
+
+
+
+<!--------JavaScript for Toggle Menu-------->
+
+<script>
+    var navlinks = document.getElementById("navlinks");
+        function showmenu(){
+            navlinks.style.right = "0"; 
+        }
+        function closemenu(){
+            navlinks.style.right = "-150px";
+        }
+
+        function loadMoreProjects() {
+            var projectsPerClick = 3;
+            var hiddenProjects = document.querySelectorAll('.project_col.hidden');
+            for (var i = 0; i < projectsPerClick && i < hiddenProjects.length; i++) {
+                hiddenProjects[i].classList.remove('hidden');
+            }
+            if (hiddenProjects.length <= projectsPerClick) {
+                document.getElementById('load-more').style.display = 'none';
+            }
+        }
+        
+</script>
+
+</body>
+
+</html>
