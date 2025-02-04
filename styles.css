@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,90,0.7)), url(images/3.jpeg);
+    filter: brightness(1.5); /* Adjust brightness */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    image-rendering: high-quality; /* Add to ensure smooth rendering */
+}
+
+nav{
+    display: flex;
+    padding: 4% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 110px;
+    border-radius: 8px; /* Adds rounded corners to the logo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-table;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+
+.nav-links ul li a{
+    color: #fff; /* The color of nav texts */
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff; /* The color of the linjes under navs*/
+    display: block;
+    margin: auto;
+    transition: 0.25s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;    
+}
+
+.text-box h1{
+    font-size: 70px; /* size of title in website */
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px; /* size of undertitle in website */
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px; /* size of text in the button */
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 0.25s;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+/* ---------The setting when you do open the website in phone or smaller device--------- */
+
+@media(max-width: 768px) and (max-width: 1024px){
+    
+    nav img{
+        width: 80px;
+    }
+    .text-box h1{
+        font-size: 35px;
+    }
+    .text-box p{
+        font-size: 15px;
+    }
+    .hero-btn{
+        font-size: 10px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336; /* the backgroundcolor of Menu */
+        height: 100vh;
+        width: 150px; /* The size of the Menu */
+        top: 0;
+        right: -150px; /* minus value for closing/hiding the Menu */
+        text-align: left;
+        z-index: 2;
+        transition: 0.6s; /* transition time for closing and opening Menu */
+    }
+    nav .fa-solid{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 22px;
+    }
+    
+    .projects h1 {
+        font-size: 35px;
+    }
+
+    .projects p {
+        font-size: 15px;
+    }
+
+    .row {
+        flex-direction: column; /* Display in a single column */
+        align-items: center;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .project_col {
+        width: 100%; /* Ensure the boxes have a uniform width */
+        max-width: 500px; /* Set a max width to keep consistency */
+        margin: 10px 0; 
+        padding: 15px; /* Adjust padding if needed */
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* ---------Projects--------- */
+
+.projects{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+h1{
+    font-size: 40px; /* size of title projects done */
+    font-weight: 600;
+}
+
+p{
+    color: #555;
+    font-size: 16px; /* size of undertitle below projects done */
+    font-weight: 300;
+    line-height: 25px;
+    padding: 10px;
+}
+
+.project_text {
+    text-align: justify;
+}
+
+.row{
+    margin-top: 1%;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin: auto;
+    overflow-y: auto;
+}
+
+.project_col{
+    flex-basis: 27%; /* spaces between boxes of captions for projects */
+    margin: 17px; /* spaces between each box */
+    padding: 15px; /* The space inside of each box to the box's edge */
+    background-color: #fff3f3; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 25px; /* borderadius of boxex with caption of projects */
+    overflow: hidden; /
+    box-sizing: border-box; 
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_col h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project_col p {
+    font-size: 14px;
+    color: #555; /* color of caption text inside of the box */
+    word-wrap: break-word; 
+    text-align: justify;
+}
+
+.project_col:hover{
+    box-shadow: 0 0 20px 0#c0c0c0;
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    background-color: #f9e0e2;
+    border: 1px solid #333; 
+}
+
+.hidden {
+    display: none; /* Hide additional projects initially */
+}
+
+#load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336; /* Color of the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#load-more:hover {
+    background-color: #d62828; /* Change color on hover */
+}
+
+.demo_btn {
+    margin-top: auto;
+}
+
+
+/* ---------Contact Me--------- */
+
+section.contact {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/4.jpeg); /* Semi-transparent overlay */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 25px; /* Rounded corners contact window */
+}
+
+.contact h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.contact .cta {
+    display: inline-block;
+    background-color: #e63946; /* Solid color for the button */
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f3f3; /* Set the background color of the footer */
+    color: #333;
+    border-top: 1px solid #ddd; /* Optional: adds a border at the top of the footer */
+}
+
+.footer h4 {
+    font-size: 27px;
+    margin-bottom: 1px;
+    color: #333;
+}
+
+.footer p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 1px;
+}
+
+.footer p .fa-heart {
+    color: red; /* Default color of the heart */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons i:hover {
+    transform: scale(1.2);
+}
+
+.social-icons i {
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.footer i.fa-facebook {
+    color: #3b5998; /* Facebook blue */
+}
+
+.footer i.fa-instagram {
+    color: #e4405f; /* Instagram pink */
+}
+
+.footer i.fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+
+
+
+/* --------- Pictures --------- */
+
+
+
+
+.gallery-container {
+    padding-top: 25px;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gallery-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(20,16,22,0.8) 0%,
+        rgba(20,16,22,0.6) 10%,
+        transparent 30%,
+        transparent 70%,
+        rgba(20,16,22,0.6) 90%,
+        rgba(20,16,22,0.8) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+.gallery {
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5),
+                10px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+
+.gallery img.small {
+    width: 135px;
+}
+
+.gallery img.medium {
+    width: 185px;
+}
+
+.gallery img.large {
+    width: 225px;
+}
+
+.row1 {
+    display: flex;
+    animation: moveLeft 20s linear infinite;
+    padding-bottom: 20px;
+}
+
+.row2 {
+    display: flex;
+    animation: moveRight 20s linear infinite;
+    padding-bottom: 20px;
+}
+
+@keyframes moveLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes moveRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(50%); }
+}
